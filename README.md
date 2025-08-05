@@ -12,10 +12,12 @@ A comprehensive template for setting up AI assistant context in any project. Thi
 
 1. **`codebase-analysis.md`** - Instructions for AI to analyze the codebase and generate an initial assessment
 2. **`workflow.md`** - Development workflow and task management process
-3. **`testing-strategy.md`** - Testing requirements and standards
-4. **`definition-of-done.md`** - Completion criteria for all tasks
-5. **`project-context.md`** - Business context and domain knowledge (optional)
-6. **`constraints.md`** - Technical, business, and operational constraints (optional)
+3. **`post-subtask-completion.md`** - MANDATORY checklist after each subtask (prevents commit skipping)
+4. **`post-task-completion.md`** - MANDATORY checklist after each task (ensures comprehensive completion)
+5. **`testing-strategy.md`** - Testing requirements and standards
+6. **`definition-of-done.md`** - Completion criteria for all tasks
+7. **`project-context.md`** - Business context and domain knowledge (optional)
+8. **`constraints.md`** - Technical, business, and operational constraints (optional)
 
 ## How to Use This Template
 
@@ -53,6 +55,42 @@ A comprehensive template for setting up AI assistant context in any project. Thi
 - Provides consistent workflow across different projects
 - Enables incremental development with working code at each step
 - Facilitates clear communication between human and AI
+- **Prevents commit confusion** with explicit post-completion checklists
+- **Enforces proper git workflow** with mandatory commit-per-subtask rules
+
+## Commit Workflow Enforcement
+
+This template specifically addresses common AI assistant mistakes:
+
+### The Problem
+
+AI assistants often:
+
+- Complete multiple subtasks without committing
+- Commit only after entire tasks instead of individual subtasks
+- Use vague commit messages
+- Skip the commit step entirely
+
+### The Solution
+
+- **`post-subtask-completion.md`**: Mandatory checklist that MUST be executed after every subtask
+- **`post-task-completion.md`**: Comprehensive checklist for task completion
+- **Explicit examples**: Good vs bad commit messages with concrete examples
+- **STOP commands**: Clear instructions to halt progress until commits are made
+- **Verification steps**: Checklists to ensure commits happened correctly
+
+### Expected Commit Pattern
+
+```
+[SUBTASK] Create user model with validation
+[SUBTASK] Add password hashing logic
+[SUBTASK] Implement login API endpoint
+[SUBTASK] Add JWT token generation
+[SUBTASK] Create authentication middleware
+[TASK] Complete user authentication system (optional)
+```
+
+This ensures every piece of working code is committed individually, making it easy to track progress and roll back specific changes if needed.
 
 ## Customization
 
