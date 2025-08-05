@@ -92,18 +92,18 @@ make test-full
 ### 5. Optional: Create Task Summary Commit
 
 - [ ] Consider creating a summary commit for the entire task (optional)
-- [ ] Use format: `[TASK] Brief description of completed task`
+- [ ] Follow `commit-convention.md` format: `[ainame] type: description`
 
 **Task Summary Commit Examples:**
 
 ✅ **GOOD Task Summary Examples:**
 
 ```
-[TASK] Complete user authentication system with login/logout/registration
-[TASK] Implement payment processing with Stripe integration
-[TASK] Add responsive design for mobile devices
-[TASK] Complete database migration to PostgreSQL
-[TASK] Implement real-time chat functionality with WebSockets
+[cline] feat: complete user authentication system with login/logout/registration
+[cline] feat: implement payment processing with Stripe integration
+[cline] style: add responsive design for mobile devices
+[cline] refactor: complete database migration to PostgreSQL
+[cline] feat: implement real-time chat functionality with WebSockets
 ```
 
 **Git Commands for Task Summary:**
@@ -111,8 +111,10 @@ make test-full
 ```bash
 # Optional - only if you want a summary commit
 git add .
-git commit -m "[TASK] Brief description of completed task"
+git commit -m "[ainame] type: brief description of completed task"
 ```
+
+**⚠️ IMPORTANT**: Review `commit-convention.md` for complete format rules and semantic types.
 
 ### 6. Update Documentation
 
@@ -172,7 +174,7 @@ git commit -m "[TASK] Brief description of completed task"
 Before proceeding to the next task, confirm:
 
 - [ ] All subtasks are marked COMPLETE with timestamps
-- [ ] Each subtask has its own commit with [SUBTASK] prefix
+- [ ] Each subtask has its own commit following commit-convention.md format
 - [ ] Comprehensive tests pass
 - [ ] Definition of done criteria met
 - [ ] Task marked COMPLETE in tasks-and-subtasks.md

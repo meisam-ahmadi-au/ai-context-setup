@@ -10,14 +10,15 @@ A comprehensive template for setting up AI assistant context in any project. Thi
 
 ### Core Components (`.ainame/` folder)
 
-1. **`codebase-analysis.md`** - Instructions for AI to analyze the codebase and generate an initial assessment
+1. **`codebase-analysis.md`** - Instructions for AI to analyze the codebase and verify runtime functionality
 2. **`workflow.md`** - Development workflow and task management process
-3. **`post-subtask-completion.md`** - MANDATORY checklist after each subtask (prevents commit skipping)
-4. **`post-task-completion.md`** - MANDATORY checklist after each task (ensures comprehensive completion)
-5. **`testing-strategy.md`** - Testing requirements and standards
-6. **`definition-of-done.md`** - Completion criteria for all tasks
-7. **`project-context.md`** - Business context and domain knowledge (optional)
-8. **`constraints.md`** - Technical, business, and operational constraints (optional)
+3. **`commit-convention.md`** - AI name + semantic commit message standards and examples
+4. **`post-subtask-completion.md`** - MANDATORY checklist after each subtask (prevents commit skipping)
+5. **`post-task-completion.md`** - MANDATORY checklist after each task (ensures comprehensive completion)
+6. **`testing-strategy.md`** - Testing requirements and standards
+7. **`definition-of-done.md`** - Completion criteria for all tasks
+8. **`project-context.md`** - Business context and domain knowledge (optional)
+9. **`constraints.md`** - Technical, business, and operational constraints (optional)
 
 ## How to Use This Template
 
@@ -82,12 +83,12 @@ AI assistants often:
 ### Expected Commit Pattern
 
 ```
-[SUBTASK] Create user model with validation
-[SUBTASK] Add password hashing logic
-[SUBTASK] Implement login API endpoint
-[SUBTASK] Add JWT token generation
-[SUBTASK] Create authentication middleware
-[TASK] Complete user authentication system (optional)
+[cline] feat: create user model with validation
+[cline] feat: add password hashing logic
+[cline] feat: implement login API endpoint
+[cline] feat: add JWT token generation
+[cline] feat: create authentication middleware
+[cline] feat: complete user authentication system (optional)
 ```
 
 This ensures every piece of working code is committed individually, making it easy to track progress and roll back specific changes if needed.

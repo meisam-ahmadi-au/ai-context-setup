@@ -42,41 +42,32 @@ make test
 ### 3. Commit Changes (CRITICAL STEP)
 
 - [ ] Stage all relevant files
-- [ ] Create meaningful commit message using format: `[SUBTASK] Brief description`
+- [ ] Create meaningful commit message following `commit-convention.md` format
 - [ ] Commit the changes
 
-**Commit Message Examples:**
-
-✅ **GOOD Examples:**
+**Commit Format:** Follow the format specified in `commit-convention.md`:
 
 ```
-[SUBTASK] Add user authentication middleware
-[SUBTASK] Implement password validation logic
-[SUBTASK] Create user registration form component
-[SUBTASK] Add database migration for user roles
-[SUBTASK] Configure CORS settings for API
-[SUBTASK] Fix memory leak in data processing
-[SUBTASK] Add unit tests for payment service
-[SUBTASK] Update API documentation for new endpoints
+[ainame] type: description
 ```
 
-❌ **BAD Examples:**
+**Examples for Subtasks:**
 
 ```
-updated code
-fixes
-changes
-working on feature
-almost done
-temp commit
+[cline] feat: add user authentication middleware
+[cline] fix: resolve memory leak in data processing
+[cline] test: add unit tests for payment service
+[cline] docs: update API documentation for new endpoints
 ```
 
 **Git Commands:**
 
 ```bash
 git add .
-git commit -m "[SUBTASK] Your descriptive message here"
+git commit -m "[ainame] type: your descriptive message here"
 ```
+
+**⚠️ IMPORTANT**: Review `commit-convention.md` for complete format rules and examples.
 
 ### 4. Update Task Tracking
 
@@ -112,7 +103,7 @@ git commit -m "[SUBTASK] Your descriptive message here"
 1. **NEVER skip the commit step** - Each subtask MUST have its own commit
 2. **NEVER proceed to next subtask** without completing this checklist
 3. **NEVER batch multiple subtasks** into a single commit
-4. **ALWAYS use the [SUBTASK] prefix** in commit messages
+4. **ALWAYS follow commit-convention.md format** - `[ainame] type: description`
 
 ## ⚠️ Common Mistakes to Avoid
 
@@ -127,7 +118,7 @@ git commit -m "[SUBTASK] Your descriptive message here"
 Before moving to the next subtask, ask yourself:
 
 - [ ] Did I commit this subtask's changes?
-- [ ] Is my commit message descriptive and prefixed with [SUBTASK]?
+- [ ] Does my commit message follow commit-convention.md format `[ainame] type: description`?
 - [ ] Are all tests passing?
 - [ ] Is the subtask marked as COMPLETE in tasks-and-subtasks.md?
 

@@ -25,7 +25,7 @@
 1. **STOP** - Do not proceed to next subtask
 2. **EXECUTE** the complete `post-subtask-completion.md` checklist
 3. **VERIFY** code works and tests pass
-4. **COMMIT** with `[SUBTASK]` prefix
+4. **COMMIT** following `commit-convention.md` format
 5. **UPDATE** tasks-and-subtasks.md with completion status
 6. Only then proceed to next subtask
 
@@ -40,7 +40,15 @@
 
 ## Commit Message Format:
 
-`[SUBTASK] Brief description of what was implemented`
+Follow the format specified in `commit-convention.md`:
+
+`[ainame] type: description`
+
+**Examples:**
+
+- `[cline] feat: add user authentication system`
+- `[cline] fix: resolve memory leak in data processing`
+- `[cline] test: add unit tests for payment service`
 
 ## Status Tracking:
 
@@ -96,12 +104,12 @@ Update tasks-and-subtasks.md with completion status and timestamps.
 ### Example Commit History for Task 1:
 
 ```
-[SUBTASK] Create user model with validation
-[SUBTASK] Add password hashing logic
-[SUBTASK] Implement login API endpoint
-[SUBTASK] Add JWT token generation
-[SUBTASK] Create authentication middleware
-[TASK] Complete user authentication system (optional summary)
+[cline] feat: create user model with validation
+[cline] feat: add password hashing logic
+[cline] feat: implement login API endpoint
+[cline] feat: add JWT token generation
+[cline] feat: create authentication middleware
+[cline] feat: complete user authentication system (optional summary)
 ```
 
 ## Next Steps:
